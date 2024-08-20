@@ -1,0 +1,117 @@
+@font-face {
+	font-family: figtree-italic;
+	src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+	font-family: figtree-normal;
+	src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+
+:root {
+	--yellow: hsl(47, 88%, 63%);
+	--white: hsl(0, 0%, 100%);
+	--gray-500: hsl(0, 0%, 42%);
+	--gray-950: hsl(0, 0%, 7%);
+	--fw-500: 500;
+	--fw-800: 800;
+	--shadow: 0.5rem 0.5rem 0px 0px var(--gray-950);
+	box-sizing: border-box;
+}
+body {
+	padding: 0;
+	margin: 0;
+}
+.post {
+	margin: 0;
+	background-color: var(--yellow);
+	font-family: figtree-normal;
+	display: grid;
+	place-content: center;
+	height: 100vh;
+	width: 100vw;
+	/* align-self: center; */
+}
+
+.card-image {
+	border-radius: 0.5rem;
+	width: 100%;
+	display: block;
+}
+
+.card {
+	background-color: var(--white);
+	width: 20em;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 1.25rem;
+	border-radius: 1rem;
+	border-style: solid;
+	/* border-color: var(--gray-500); */
+	border-width: 1px;
+	box-shadow: var(--shadow);
+	-webkit-box-shadow: var(--shadow);
+	-moz-box-shadow: var(--shadow);
+	/* display: inline; */
+}
+
+.blogger {
+	display: flex;
+	gap: 1rem;
+	align-content: center;
+}
+
+.blogger-name {
+	padding-top: auto;
+	padding-bottom: auto;
+	align-content: center;
+	font-weight: var(--fw-800);
+}
+
+.blogger-photo {
+	align-content: center;
+	width: 2rem;
+}
+
+.tag {
+	--space: calc(0.5rem - 1.5px);
+	background-color: var(--yellow);
+	padding: 0.5rem;
+	padding-top: var(--space);
+	border-radius: var(--space);
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	display: inline-block;
+	font-weight: var(--fw-800);
+}
+
+.date {
+	font-weight: var(--fw-500);
+}
+
+.title {
+	font-weight: var(--fw-800);
+}
+.title:hover {
+	color: var(--yellow);
+	transition: ease-out;
+	cursor: pointer;
+}
+p {
+	color: var(--gray-500);
+	font-weight: var(--fw-500);
+	padding-bottom: 1rem;
+}
+
+@media screen and (width: 375px) {
+
+	.card {
+		margin: 0;
+		display: block;
+		width: 18em;
+	}
+
+	.card-image{
+		transform: scale(1.1);
+	}
+}
